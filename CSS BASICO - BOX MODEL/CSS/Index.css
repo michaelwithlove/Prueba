@@ -1,0 +1,20 @@
+#Titulo {
+    color: rgba(245, 198, 80, 0.893);
+    border: 5px double gray;
+    font-family: "Roboto", sans-serif;
+}
+
+* {
+    background-color: black;
+}
+.subtitulo {
+    font-family: "Roboto", sans-serif;
+    color: rgba(245, 198, 80, 0.893);
+}
+.parrafo {
+    color: rgb(174, 150, 118);
+    font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  font-style: italic;
+  
+}
