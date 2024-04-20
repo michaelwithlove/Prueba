@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-template-rows: 500px 500px 500px 500px;
+    grid-template-areas: 
+    "img1 img2 img3"
+    "img4 img4 img3"
+    "img5 img6 img7"
+    "img5 img8 img8"
+    ;
+    gap: 15px;
+    padding: 15px;
+}
+.image_item_1{
+    background-color: grey;
+    grid-area: img1;
+    background-image: url(../ASSETS/image_gallery_1.jpg);
+    
+}
+.image_item_2{
+    grid-area: img2;
+    background-color: rgb(255, 255, 255);
+    background-image: url(../ASSETS/image_gallery_2.jpg);
+}
+.image_item_3{
+grid-area: img3;
+background-color: rgb(35, 25, 25);
+background-image: url(../ASSETS/image_gallery_3.jpg);
+}
+.image_item_4{
+grid-area: img4;
+background-color: rgb(255, 45, 45);
+background-image: url(../ASSETS/image_gallery_4.jpg);
+}
+.image_item_5{
+grid-area: img5;
+background-color: rgb(60, 2, 2);
+background-image: url(../ASSETS/image_gallery_5.jpg);
+}
+.image_item_6{
+grid-area: img6;
+background-color: rgb(16, 161, 0);
+background-image: url(../ASSETS/image_gallery_6.jpg);
+}
+.image_item_7{
+grid-area: img7;
+background-color: rgb(71, 190, 206);
+background-image: url(../ASSETS/image_gallery_7.jpg);
+}
+.image_item_8{
+grid-area: img8;
+background-color: rgb(188, 14, 226);
+background-image: url(../ASSETS/image_gallery_8.jpg);
+}
+
+.image_item_1, .image_item_2, .image_item_3, .image_item_4, .image_item_5, .image_item_6, .image_item_7, .image_item_8{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}

@@ -1,0 +1,39 @@
+.container{
+    display: grid;
+    /*especificar cantidad y tamaño de las columnas*/
+    grid-template-columns: 300px 300px 300px;
+    /*especificar cantidad y tamaño de las filas*/
+    grid-template-rows: 200px 200px 200px 200px;
+    /*creacion de templates*/
+    grid-template-areas: 
+    "nav header header"
+    "nav productos publicidad"
+    "nav servicios publicidad"
+    "nav footer footer"
+    ;
+}
+
+.nav{
+    background-color: rgba(255, 0, 0, 0.466);
+    grid-area: nav;
+}
+.header{
+    background-color: rgba(0, 0, 255, 0.615);
+    grid-area: header;
+}
+.productos{
+    background-color: rgb(17, 206, 17);
+    grid-area: productos;
+}
+.servicios{
+    background-color: rgba(255, 255, 0, 0.727);
+    grid-area: servicios;
+}
+.publicidad{
+    background-color: rgb(105, 104, 104);
+    grid-area: publicidad;
+}
+.footer{
+    background-color: rgb(226, 143, 157);
+    grid-area: footer;
+}
