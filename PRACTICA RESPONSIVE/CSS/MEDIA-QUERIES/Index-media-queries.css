@@ -1,0 +1,108 @@
+@media (max-width: 1200px) {
+    /*HEADER*/
+    header{
+        padding: 20px 40px;
+    }
+    .header_title_container > h2 {
+        font-size: 22px;
+        }
+        .header_navigation{
+            gap: 27px;
+        }
+        .header_navigation > a {
+            font-size: 14px;
+        }
+        /*MAIN*/
+    /*SECTION: PRESENTATION*/
+    .presentation {
+        gap: 50px;
+        padding: 70px 18px;
+        }
+        .presentation_content > h2{
+            font-size: 50px;
+        }
+        .presentation_content> p {
+            font-size: 14px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .presentation_content > button {
+            font-size: 13px;
+            padding: 11px 25px;
+        }
+        .presentation-image{
+            width: 30%;
+        }
+        
+}
+
+@media (max-width: 1024px){
+    /*HEADER*/
+    header{
+        padding: 10px 25px;
+    }
+    .header_navigation > a {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 900px) {
+    /*HEADER*/
+    .header_navigation{
+        display: none;
+    }
+    .header_buttons{
+        display: none
+    }
+    .menu-hamburguesa{
+        display: block;
+        width: 35px;
+    }
+    /*MAIN*/
+/*SECTION: PRESENTATION*/
+.presentation {
+    flex-direction: column;
+    text-align: center;
+      }
+      .presentation-image{
+          width: 47%;
+      }
+}
+@media (max-width: 600px) {
+    .presentation {
+        gap: 50px;
+        padding: 70px 18px;
+        }
+        .presentation_content > h2{
+            font-size: 38px;
+        }
+        .presentation_content> p {
+            font-size: 12px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .presentation_content > button {
+            font-size: 11px;
+            padding: 11px 20px;
+        }
+        .presentation-image{
+            width: 45%;
+        }       
+}
+@media (max-width: 431px) {
+    .presentation {
+        gap: 50px;
+        padding: 70px 18px;
+        }
+        .presentation_content > h2{
+            font-size: 26px;
+        }
+        .presentation_content> p {
+            font-size: 8px;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+        .presentation-image{
+            width: 65%;
+        }  
+}
