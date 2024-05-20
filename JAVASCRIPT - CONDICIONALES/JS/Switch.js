@@ -1,7 +1,7 @@
 // multiples condiciones en base a un dato
-const error = "Juan";
+const nombre = "Juan";
 
-switch (error) {
+switch (nombre) {
   case "Juan":
     console.log("Bienvenido Juan");
     break;
