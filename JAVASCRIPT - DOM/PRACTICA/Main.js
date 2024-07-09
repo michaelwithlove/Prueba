@@ -3,5 +3,5 @@ const parrafo = document.querySelector('p')
 
 boton.addEventListener('click', function(){
     console.log('boton clickeado');
-    parrafo.classList.toggle('p')
+    parrafo.classList.toggle('parrafo')
 })

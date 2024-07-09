@@ -41,16 +41,23 @@
 //console.log(seccionProductos.classList.contains ('fondo-verde'))
 
 //llamamos la ubicacion para crear el nuevo elemento "boton"
-const header = document.querySelector('header')
+//const header = document.querySelector('header')
 //creamos el elemento "boton"
-const boton = document.createElement('button');
+//const boton = document.createElement('button');
 //asignamos un texto para el boton
-boton.innerText = 'Menu';
+//boton.innerText = 'Menu';
 //asociamos la creacion del elemento para que aparezca
-header.append(boton)
+//header.append(boton)
 //asignamos un atributo al boton
 //boton.setAttribute('')
 //Asignamos un evento al elemento con una funcion flecha
-boton.addEventListener ('click', ()=> {
-    console.log('boton presionado')
-})
+//boton.addEventListener ('click', ()=> {
+  //  console.log('boton presionado')
+//})
+
+//CONSTANTES ARRAY COMO MANIPULACION DE ELEMENTOS EN EL DOM
+const arrayCualquiera = []
+arrayCualquiera.push(2)
+console.log(arrayCualquiera)
+const parrafosArray = Array.from(parrafos)
+
