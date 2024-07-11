@@ -60,26 +60,83 @@
 //}
 
 //BUCLES
+//const usuarios = [
+//{
+//  username: "usuario1",
+//        contrasenia: "clave123"
+//    },
+//    {
+//        username: "johndoe",
+//        contrasenia: "segura#123"
+//    },
+//    {
+//        username: "migueld",
+//        contrasenia: "password999"
+//    }
+//];
+//
+//for (const user of usuarios) {
+//    console.log(user.contrasenia)
+//}
+//
+//let nombreDeUsuario;
+//let password;
+//let condition = false;
+
 const usuarios = [
-    {
-        username: "usuario1",
-        contrasenia: "clave123"
-    },
-    {
-        username: "johndoe",
-        contrasenia: "segura#123"
-    },
-    {
-        username: "migueld",
-        contrasenia: "password999"
-    }
+  {
+      username: "usuario1",
+      contrasenia: "clave123"
+  },
+  {
+      username: "johndoe",
+      contrasenia: "segura#123"
+  },
+  {
+      username: "mariagomez",
+      contrasenia: "password456"
+  },
+  {
+      username: "superadmin",
+      contrasenia: "admin123$$$"
+  },
+  {
+      username: "alejandro7",
+      contrasenia: "miclaveSecreta"
+  }
 ];
 
 for (const user of usuarios) {
-    console.log(user.contrasenia)
+  console.log(user.contrasenia)
 }
 
 let nombreDeUsuario;
 let password;
-let condition = false;
+let condition = true;
+let contador = 1;
 
+do {
+  const nombreDeUsuario = prompt('Ingrese el usuario');
+
+  const usuarioEncontrado = usuarios.find(user => user.username === nombreDeUsuario);
+
+  if (usuarioEncontrado) {
+      const password = prompt('Ingrese la contraseña');
+
+      if (password === usuarioEncontrado.contraseña) {
+          alert('Contraseña correcta, ingresó al sistema');
+          condition = false;
+      } else {
+          alert('Contraseña incorrecta, intente de nuevo');
+          contador++;
+      }
+  } else {
+      alert('Usuario incorrecto, intente de nuevo');
+      contador++;
+  }
+
+  if (contador > 3) {
+      alert('Demasiados intentos fallidos, finalizó el programa');
+      condition = false;
+  }
+} while (condition);
