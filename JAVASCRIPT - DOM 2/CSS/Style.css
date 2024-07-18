@@ -1,0 +1,13 @@
+.color-green{
+    color: green;
+}
+
+.color-green:hover {
+    background-color: purple;
+}
+
+.rotacion {
+    rotate: 90deg;
+    padding: 5px;
+    text-align: center;
+}
