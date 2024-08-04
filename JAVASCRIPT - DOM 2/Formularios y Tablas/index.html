@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FormularioYTablas</title>
+    <link
+      rel="stylesheet"
+      href="/JAVASCRIPT - DOM 2/Formularios y Tablas/style.css"
+    />
+  </head>
+  <body>
+    <main>
+      <section>
+        <form>
+          <label for="curso">Curso</label>
+          <select name="cursos" id="cursos"></select>
+          <label for="tiempo">Hora</label>
+          <input type="time" name="tiempo" id="tiempo" />
+          <input type="submit" value="Enviar" />
+          <input type="Reset" />
+        </form>
+      </section>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Curso</th>
+            <th>Horario</th>
+          </tr>
+        </thead>
+        <tbody id="datos"></tbody>
+      </table>
+    </main>
+    <script src="/JAVASCRIPT - DOM 2/Formularios y Tablas/main.js"></script>
+  </body>
+</html>
