@@ -46,7 +46,7 @@ const crearOptions = (arr, contenedor, tagName, funcion) => {
 
 //con este nodo de codigo, agregamos la info del formulario a la tabla
 const cargarTabla = (arr, data) => {
-   data.id = arr.lenght + 1
+   data.id = arr.length + 1
     arr.push(data)
     console.log(arr)
     //crear elementos
@@ -60,8 +60,8 @@ const cargarTabla = (arr, data) => {
         const tdHorario = document.createElement('td')
 
         tdId.innerText = elemento.id
-        tdCurso = elemento.cursos
-        tdHorario = elemento.hora
+        tdCurso.innerText = elemento.cursos
+        tdHorario.innerText = elemento.tiempo
 
         tr.append(tdId, tdCurso, tdHorario)
         tbody.append(tr)
