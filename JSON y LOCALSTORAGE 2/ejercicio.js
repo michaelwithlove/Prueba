@@ -5,6 +5,11 @@ let classStyle = localStorage.getItem('class')
 
 if(classStyle !== null){
     document.body.classList.add(classStyle)
+    if (classStyle === 'dark') {
+        boton.innerText = 'light'
+    } else {
+        boton.innerText = 'dark'
+    }
 }
 
 boton.addEventListener('click', function(){
