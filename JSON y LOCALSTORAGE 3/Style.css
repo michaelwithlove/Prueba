@@ -19,3 +19,10 @@ table {
     margin: 20px 30px;
     border: solid;
 }
+
+table>thead>tr>th {
+    border-bottom: solid;
+    display: flexbox;
+    justify-content: space-between;
+
+}

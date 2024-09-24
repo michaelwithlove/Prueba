@@ -1,4 +1,5 @@
-const productos = [
+let productos = null
+productos = [
     { "id": 1, "nombre": "Camiseta básica", "precio": 19.99, "cantidad": 50 },
     { "id": 2, "nombre": "Pantalón jeans", "precio": 39.99, "cantidad": 30 },
     { "id": 3, "nombre": "Sudadera con capucha", "precio": 29.99, "cantidad": 40 },
@@ -49,9 +50,17 @@ function cargarDatosEnHtml(array, contenedor) {
   }
 
 function main () {
+  const contenedorAsync = document.querySelector('.contenidoAsync')
+  contenedorAsync.innerHTML = '<h3>Cargando...</h3>'
+    setTimeout (() => {
+      contenedorAsync.innerHTML = '<h3>Contenido cargado</h3>'
+    }, 3000)
+  if(!existeKeyLocalStorage('productos')){
     cargarlocalStorage('productos', productos)
+  }
     const data = obtenerDatosLocalStorage('productos')
     cargarDatosEnHtml(data, tbody)
+    
 }
 
 main()
