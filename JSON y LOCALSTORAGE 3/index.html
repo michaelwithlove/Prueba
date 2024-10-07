@@ -11,6 +11,23 @@
       <h1>Productos en venta</h1>
     </header>
     <main>
+      <form action="">
+        <label for="nombre">nombre</label>
+        <input type="text" name="nombre" />
+        <p class="d-none warning" id="prod-nombre">Debe introducir un nombre</p>
+
+        <label for="precio">precio</label>
+        <input type="number" name="precio" />
+        <p class="d-none warning" id="prod-precio">Debe introducir un precio</p>
+
+        <label for="cantidad">cantidad</label>
+        <input type="number" name="cantidad" />
+        <p class="d-none warning" id="prod-cantidad">
+          Debe introducir una cantidad
+        </p>
+        <input type="submit" value="Cargar producto" />
+      </form>
+
       <table>
         <thead>
           <tr>

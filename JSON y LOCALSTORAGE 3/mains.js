@@ -18,6 +18,7 @@ productos = [
 ];
 
 const tbody = document.querySelector('table>tbody')
+const form = document.querySelector('form')
 
 function cargarlocalStorage(key, array){
   localStorage.setItem(key, JSON.stringify(array))
@@ -47,14 +48,50 @@ function cargarDatosEnHtml(array, contenedor) {
     });
 
     contenedor.innerHTML = datos
+}
+
+function cargarProducto(producto) {
+  const messagesWarning = document.querySelectorAll('.warning')
+  try {
+    if(!producto.nombre) {
+      const inputNombre = Array.from(messagesWarning).find(input => input.id === 'prod-nombre')
+      inputNombre.classList.remove('d-none')
+      throw new Error('Debe colocarse el nombre')
+    }
+    if(!producto.precio) {
+      const inputPrecio = Array.from(messagesWarning).find(input => input.id === 'prod-precio')
+      inputPrecio.classList.remove('d-none')
+      throw new Error('Debe colocarse el nombre')
+    }
+    if(!producto.cantidad) {
+      const inputCantidad = Array.from(messagesWarning).find(input => input.id === 'prod-cantidad')
+      inputCantidad.classList.remove('d-none')
+      throw new Error('Debe colocarse el nombre')
+    }
+     const array = JSON.parse(localStorage.getItem('productos'))
+     producto.id = array.length + 1    
+     array.push(producto)     
+     //localStorage.setItem('productos', JSON.stringify(array))     
+     cargarDatosEnHtml(array, tbody)
+  } catch (error) {
+    console.error(error)
   }
+}
+
+form.addEventListener('submit', function(event){
+  event.preventDefault()
+  const producto = Object.fromEntries (new FormData(event.target))
+  cargarProducto(producto)
+})
+
 
 function main () {
-  const contenedorAsync = document.querySelector('.contenidoAsync')
-  contenedorAsync.innerHTML = '<h3>Cargando...</h3>'
-    setTimeout (() => {
-      contenedorAsync.innerHTML = '<h3>Contenido cargado</h3>'
-    }, 3000)
+  //setTimeout
+  //const contenedorAsync = document.querySelector('.contenidoAsync')
+  //contenedorAsync.innerHTML = '<h3>Cargando...</h3>'
+  //  setTimeout (() => {
+  //    contenedorAsync.innerHTML = '<h3>Contenido cargado</h3>'
+  //  }, 3000)
   if(!existeKeyLocalStorage('productos')){
     cargarlocalStorage('productos', productos)
   }
