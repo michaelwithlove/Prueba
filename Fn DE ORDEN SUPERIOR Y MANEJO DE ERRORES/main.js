@@ -63,3 +63,20 @@ console.log(clavesPersona)
 
 const valorPersona = Object.values(persona)
 console.log(valorPersona)
+
+
+//ASSIGN es util para combinar objetos o clonar un objeto con propiedades enumerables y propias
+const persona2 = {
+    nombre: 'Agustin',
+    Nacionalidad: 'Argentina'
+}
+
+const newObj = Object.assign(persona, persona2)
+console.log(newObj)
+
+//FREEZE es util para prevenir que nuevas propiedades sean añadidas a el, y hace todas las propiedades existentes no configurables
+Object.freeze(persona2)
+
+persona2.casado = true
+
+console.log(persona2)
