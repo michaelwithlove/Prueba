@@ -33,7 +33,20 @@ function randomOperation() {
     })
 }
 
-//then catch
+//PROMESAS:
+//then catch - usamos este metodo de manejo de promesa para el consumo de APIs
 randomOperation()
     .then(result => console.log(result))
     .catch(error => console.error(error.message))
+
+//async / await - usamos este metodo para crear funciones asincronas
+async function ejecutarFnRandom() {
+    try {
+        console.log('async await')
+        const result = await randomOperation()
+        console.log(result)
+    } catch (error) {
+        console.error(error.message)
+    }
+}
+ejecutarFnRandom()

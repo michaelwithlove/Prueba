@@ -3,10 +3,24 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
     <title>Asincronía</title>
   </head>
   <body>
     <div class="container"></div>
+    <form action="">
+      <label for="nombre"> Nombre</label>
+      <input type="text" name="Nombre" class="inputs" />
+      <p class="danger d-nombre">Falta el nombre</p>
+      <label for="edad"> Edad</label>
+      <input type="number" name="Edad" class="inputs" />
+      <p class="danger d-edad">Falta la edad</p>
+      <div class="btns">
+        <input type="submit" value="Enviar" /> <input type="reset" />
+      </div>
+    </form>
+
     <script src="main.js"></script>
+    <script src="practica.js"></script>
   </body>
 </html>
