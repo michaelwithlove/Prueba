@@ -7,7 +7,7 @@ formulario.addEventListener('submit', function (event) {
     event.preventDefault ()
     const data = Object.fromEntries(new FormData(event.target))
     
-fetch(`https://www.omdbapi.com/?apikey=${Key}&type=movie&s=${data.Buscar}`)
+fetch (`https://www.omdbapi.com/?apikey=${Key}&type=movie&s=${data.Buscar}`)
         .then(Response => Response.json())
         .then(datos => {
             let datosParseados = ''
