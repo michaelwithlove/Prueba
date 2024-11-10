@@ -75,3 +75,33 @@ section{
  td{
     padding: 13px;
  }
+
+.bg-bluelight{
+    background-color: rgb(104, 104, 230);
+    color: white;
+}
+
+.buttons{
+    width: 60px;
+    border: none;
+    border-radius: 8px;
+    padding: 5px 0;
+    font-weight: bolder;
+    color: white;
+}
+
+.btn-edit{
+    background-color: rgb(2, 177, 2);
+}
+
+.btn-edit:hover{
+    background-color: rgb(138, 255, 138)
+}
+
+.btn-delete{
+    background-color: red;
+}
+
+.btn-delete:hover{
+    background-color: rgb(255, 128, 128)
+}
