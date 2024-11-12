@@ -105,3 +105,8 @@ section{
 .btn-delete:hover{
     background-color: rgb(255, 128, 128)
 }
+
+/*EDIT*/
+.user{
+    text-align: center;
+}

@@ -22,14 +22,22 @@ fetch(`https://672bb5cf1600dda5a9f617ba.mockapi.io/Users`)
                     </tr>
             `
         });
-        container.innerHTML = datos
+        if(container){
+            container.innerHTML = datos
+
+        }
     })
     .then(()=> {
         const btnsDelete = document.querySelectorAll('.btn-delete')
+        const btnsEdit = document.querySelectorAll('.btn-edit')
         btnsDelete.forEach(btn => {
             const id = btn.getAttribute('data-id')
             deleteDato(id)
-        });
+        })
+        btnsEdit.forEach(btn => {
+            const id = btn.getAttribute('data-id')
+            editarDato(id)
+        })
     }
     )
     .catch(err => console.error(err));    
@@ -68,18 +76,44 @@ function deleteDato(id) {
 
 function editarDato(id) {
     const btn = document.querySelector(`#edit-${id}`)
+
     btn.addEventListener('click', function() {
-        fetch(`https://672bb5cf1600dda5a9f617ba.mockapi.io/Users/${id}`, {
-            method: 'PUT',
-            headers: {
-                'Content-Type':'application/json' 
-            },
-            body: JSON.stringify(data)
+        window.location.href = 'edit.html'
+        const editForm = document.querySelector('.form-edit')
+        
+        setTimeout(() => {
+            const subtitulo = document.querySelector('.user')
+            subtitulo.textContent = `# ${id}`
+            
+            editForm.addEventListener('submit', function(event){
+                event.preventDefault()
+                const data = Object.fromEntries(new FormData(event.target))
+                data.fecha = Date.now()
+                
+                fetch(`https://672bb5cf1600dda5a9f617ba.mockapi.io/Users/${id}`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type':'application/json' 
+                    },
+                    body: JSON.stringify(data)
+                })
+                .then(() => {
+                    window.location.href = 'index.html'
+                })
+                .catch(error => console.log(error))
+              },2000)
+            })
+        //fetch(`https://672bb5cf1600dda5a9f617ba.mockapi.io/Users/${id}`, {
+        //    method: 'PUT',
+        //    headers: {
+        //        'Content-Type':'application/json' 
+        //    },
+        //    body: JSON.stringify(data)
+        //})
+        //.then(() => cargarDatos())
+        //.catch(error => console.log(error))
         })
-        .then(() => cargarDatos())
-        .catch(error => console.log(error))
-    })
-}
+    }
 
 function main() {
     cargarDatos()
