@@ -1,0 +1,15 @@
+* {
+    
+}
+
+h1 {
+    color: rgb(121, 121, 96);
+}
+
+#wrapper {
+    width: 50%;
+    background-color: rgb(200, 200, 173);
+    padding: 10px;
+    border-radius: 8px;
+    margin: 20px auto;
+}
