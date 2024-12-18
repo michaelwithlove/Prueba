@@ -12,16 +12,53 @@
   </head>
   <body>
     <!--RESPONSIVE CON BOOTSTRAP FLUID,SM,MD,XL ETC...-->
-    <div class="container">
-      <nav class="bg-dark text-white text-center fs-2">Buscar...</nav>
+    <div class="container-sm">
+      <!--<nav class="bg-dark text-white text-center fs-2">Buscar...</nav>-->
+      <!--NAVBAR EN BOOTSTRAP ES IMPORTANTE EL SCRIPT DE JS PORQUE SINO EL BOTON DE MENU DEJA DE FUNCIONAR-->
+      <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                  Dropdown
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Action</a></li>
+                  <li><a class="dropdown-item" href="#">Another action</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          </div>
+        </div>
+      </nav>
       <h1 class="text-center">Hola Bootstrap 5.3.3!</h1>
-      <!--<button class="btn btn-primary">Botón</button>-->
-
+      <button class="btn btn-primary">Botón</button>
+      
       <!--GRID CON BOOTSTRAP-->
       <div class="row">
-        <div class="col bg-secondary">Columna 1</div>
-        <div class="col bg-info">Columna 2</div>
-        <div class="col bg-success">Columna 3</div>
+      <div class="col bg-secondary">Columna 1</div>
+      <div class="col bg-info">Columna 2</div>
+      <div class="col bg-success">Columna 3</div>
       </div>
 
       <div class="row">
@@ -33,7 +70,7 @@
         <div class="col-4">Columna de 4</div>
         <div class="col-8">Columna de 8</div>
       </div>
-
+    
       <!--COLUMNAS RESPONSIVE-->
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3 bg-dark text-center text-white">
@@ -47,18 +84,17 @@
         </div>
         <div class="col-sm-6 col-md-4 col-lg-3 bg-dark text-center text-white">
           Responsive Columna
-        </div>
-
+        </div> 
+        
         <div class="row align-items-center container-custome">
           <div class="col">
-            <div class="p-2 bg-primary text-white">Columna 1</div>
-          </div>
-          <div class="col">
-            <div class="p-2 bg-secondary text-white">Columna 2</div>
-          </div>
-          <div class="col">
-            <div class="p-2 bg-info text-light">Columna 3</div>
-          </div>
+          <div class="p-2 bg-primary text-white">Columna 1</div>
+        </div>
+        <div class="col">
+          <div class="p-2 bg-secondary text-white">Columna 2</div>
+        </div>
+        <div class="col">
+          <div class="p-2 bg-info text-light">Columna 3</div>
         </div>
       </div>
 
@@ -66,45 +102,93 @@
       <div
         class="d-flex align-items-center justify-content-around container-custome"
       >
-        <div class="text-white px-2 mx-2 bg-success">item 1</div>
-        <div class="text-white px-2 mx-2 bg-primary">item 2</div>
+      <div class="text-white px-2 mx-2 bg-success">item 1</div>
+      <div class="text-white px-2 mx-2 bg-primary">item 2</div>
         <div class="text-white px-2 mx-2 bg-secondary">item 3</div>
       </div>
-
+      
       <!--FORMULARIOS CON BOOTSTRAP-->
       <form>
         <div class="mb-3">
           <label for="exampleInputEmail1" class="form-label"
-            >Email address</label
-          >
-          <input
+            >Dirección Email</label
+            >
+            <input
             type="email"
             class="form-control"
             id="exampleInputEmail1"
             aria-describedby="emailHelp"
           />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
+          <div id="emailHelp" class="form-text">Coloque su email.</div>
         </div>
         <div class="mb-3">
-          <label for="exampleInputPassword1" class="form-label">Password</label>
+          <label for="exampleInputPassword1" class="form-label"
+          >Contraseña</label
+          >
           <input
             type="password"
             class="form-control"
             id="exampleInputPassword1"
-          />
+            />
         </div>
         <div class="mb-3 form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-          <label class="form-check-label" for="exampleCheck1"
-            >Check me out</label
-          >
+          <label class="form-check-label" for="exampleCheck1">Log out</label>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn btn-primary">Enviar</button>
       </form>
-    </div>
-
+    
+      <!--Alert en BOOTSTRAP-->
+      <div class="alert alert-danger" role="alert">
+        Soy una Alerta
+      </div>
+  
+      <!--CARDS EN BOOTSTRAP-->
+      <div class="card" style="width: 18rem;">
+        <img src="https://w7.pngwing.com/pngs/509/1019/
+        png-transparent-argentina-national-football-
+        team-flag-of-argentina-flag-miscellaneous-flag-logo-thumbnail.png" 
+        class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">An item</li>
+          <li class="list-group-item">A second item</li>
+          <li class="list-group-item">A third item</li>
+        </ul>
+        <div class="card-body">
+          <a href="#" class="card-link">Card link</a>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>  
+  
+      <!--MODAL EN BOOTSTRAP-->
+      <!-- Button trigger modal -->
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        Activar el Modal
+      </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Titulo del Modal</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Activaste el modal!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <button type="button" class="btn btn-primary">Guardar cambios</button>
+            </div>
+          </div>
+        </div>
+      </div>
+   </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   </body>
-</html>
+  </html>
